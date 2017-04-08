@@ -24,13 +24,26 @@ func NewZbVideoWorker(cfg *config.Config, robotExt *ext.RobotExt) *ZbVideoWorker
 	zbv := &ZbVideoWorker{
 		cfg:      cfg,
 		robotExt: robotExt,
-		MsgChan:  make(chan *robot_proto.ReceiveMsgInfo),
+		MsgChan:  make(chan *robot_proto.ReceiveMsgInfo, 1024),
 		stop:     make(chan struct{}),
 		done:     make(chan struct{}),
 	}
 	zbv.zbVideoExt = ext.NewZbVideoExt(cfg)
+	go zbv.run()
 
 	return zbv
+}
+
+func (self *ZbVideoWorker) run() {
+	for {
+		select {
+		case msg := <-self.MsgChan:
+			go self.runWorker(msg)
+		case <-self.stop:
+			close(self.done)
+			return
+		}
+	}
 }
 
 func (self *ZbVideoWorker) Stop() {
@@ -40,13 +53,13 @@ func (self *ZbVideoWorker) Stop() {
 func (self *ZbVideoWorker) HandleMsg(msg *robot_proto.ReceiveMsgInfo) {
 	select {
 	case self.MsgChan <- msg:
-		go self.runWorker(msg)
 	case <-self.stop:
 		return
 	}
 }
 
 func (self *ZbVideoWorker) runWorker(msg *robot_proto.ReceiveMsgInfo) {
+	holmes.Debug("handle worker of msg: %s", msg.Msg)
 	self.sendMsg(msg, robot_proto.RECEIVE_MSG_TYPE_TEXT, "正在查找视频中, 请稍后 ...")
 	ok := self.check(msg)
 	if ok {

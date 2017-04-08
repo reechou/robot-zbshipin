@@ -1,1 +1,58 @@
 2017/04/08 15:36:16  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:32:12  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:35:12 DEBUG [controller.(*Logic).HandleReceiveMsg](robot_logic.go:9) receive robot msg: &{{36325774 @ca26de8112525f84fe6850887cfe69699fd84d63e6f6866f737bfbc1da5cc257 小会儿 receivemsg people @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04  自己移动2 } {  } {      0 } text 91658108  0}
+2017/04/08 21:36:47  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:36:59 DEBUG [controller.(*Logic).HandleReceiveMsg](robot_logic.go:9) receive robot msg: &{{36325774 @ca26de8112525f84fe6850887cfe69699fd84d63e6f6866f737bfbc1da5cc257 小会儿 receivemsg people @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04  自己移动2 } {  } {      0 } text 91658108  0}
+2017/04/08 21:36:59 DEBUG [controller.(*ZbVideoWorker).HandleMsg](zb_video_worker.go:41) xxxx
+2017/04/08 21:40:28  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:40:32 DEBUG [controller.(*Logic).HandleReceiveMsg](robot_logic.go:9) receive robot msg: &{{36325774 @ca26de8112525f84fe6850887cfe69699fd84d63e6f6866f737bfbc1da5cc257 小会儿 receivemsg people @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04  自己移动2 } {  } {      0 } text 91658108  0}
+2017/04/08 21:40:32 DEBUG [controller.(*ZbVideoWorker).runWorker](zb_video_worker.go:62) handle worker of msg: 91658108
+2017/04/08 21:40:32 DEBUG [ext.(*RobotExt).SendMsgs](robot_ext.go:324) msg: &{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 text 正在查找视频中, 请稍后 ...}]}
+2017/04/08 21:40:32 ERROR [ext.(*RobotExt).SendMsgs](robot_ext.go:344) http do request error: Post http://127.0.0.1:8888/sendmsgs: dial tcp 127.0.0.1:8888: getsockopt: connection refused
+2017/04/08 21:40:32 ERROR [controller.(*ZbVideoWorker).sendMsg](zb_video_worker.go:131) zb video worker send msg[{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 text 正在查找视频中, 请稍后 ...}]}] error: Post http://127.0.0.1:8888/sendmsgs: dial tcp 127.0.0.1:8888: getsockopt: connection refused
+2017/04/08 21:40:32 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:40:32 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:40:35 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:40:35 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:40:45 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:40:45 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:40:45 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:40:45 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:42:35  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:42:41 DEBUG [controller.(*Logic).HandleReceiveMsg](robot_logic.go:9) receive robot msg: &{{36325774 @ca26de8112525f84fe6850887cfe69699fd84d63e6f6866f737bfbc1da5cc257 小会儿 receivemsg people @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04  自己移动2 } {  } {      0 } text 91658108  0}
+2017/04/08 21:42:41 DEBUG [controller.(*ZbVideoWorker).runWorker](zb_video_worker.go:62) handle worker of msg: 91658108
+2017/04/08 21:42:41 DEBUG [ext.(*RobotExt).SendMsgs](robot_ext.go:324) msg: &{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 text 正在查找视频中, 请稍后 ...}]}
+2017/04/08 21:42:41 ERROR [ext.(*RobotExt).SendMsgs](robot_ext.go:344) http do request error: Post http://127.0.0.1:6165/sendmsgs: dial tcp 127.0.0.1:6165: getsockopt: connection refused
+2017/04/08 21:42:41 ERROR [controller.(*ZbVideoWorker).sendMsg](zb_video_worker.go:131) zb video worker send msg[{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 text 正在查找视频中, 请稍后 ...}]}] error: Post http://127.0.0.1:6165/sendmsgs: dial tcp 127.0.0.1:6165: getsockopt: connection refused
+2017/04/08 21:42:41 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:42:41 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:42:41 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:42:41 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:42:51 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:42:51 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:42:51 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:42:51 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:45:04  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:45:09 DEBUG [controller.(*Logic).HandleReceiveMsg](robot_logic.go:9) receive robot msg: &{{36325774 @ca26de8112525f84fe6850887cfe69699fd84d63e6f6866f737bfbc1da5cc257 小会儿 receivemsg people @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04  自己移动2 } {  } {      0 } text 91658108  0}
+2017/04/08 21:45:09 DEBUG [controller.(*ZbVideoWorker).runWorker](zb_video_worker.go:62) handle worker of msg: 91658108
+2017/04/08 21:45:09 DEBUG [ext.(*RobotExt).SendMsgs](robot_ext.go:324) msg: &{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 text 正在查找视频中, 请稍后 ...}]}
+2017/04/08 21:45:09 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:45:09 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:45:09 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:45:09 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:45:19 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:45:19 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:45:19 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:45:19 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:45:29 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:45:29 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:45:30 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:45:30 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:45:40 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:45:40 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:45:40 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:45:40 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:45:50 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:45:50 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
+2017/04/08 21:45:50 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
+2017/04/08 21:45:50 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo

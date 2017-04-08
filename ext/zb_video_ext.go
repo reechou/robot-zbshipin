@@ -27,12 +27,12 @@ func NewZbVideoExt(cfg *config.Config) *ZbVideoExt {
 }
 
 func (self *ZbVideoExt) GetZbVideo(request *GetZbVideoReq) (*GetZbVideoRsp, error) {
+	holmes.Debug("get zb video req: %v", request)
 	reqBytes, err := json.Marshal(request)
 	if err != nil {
 		holmes.Error("json encode error: %v", err)
 		return nil, err
 	}
-	holmes.Debug("get zb video request: %s", string(reqBytes))
 	
 	req, err := http.NewRequest("POST", fmt.Sprintf("http://%s%s", self.cfg.ZBVideoHost.Host, ZB_VIDEO_MAKE_QUERY), bytes.NewBuffer(reqBytes))
 	if err != nil {
