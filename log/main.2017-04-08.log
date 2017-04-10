@@ -56,3 +56,10 @@
 2017/04/08 21:45:50 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:36) get zb video request: {"Code":"91658108"}
 2017/04/08 21:45:50 ERROR [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:58) json decode error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo [{"data":[],"state":1200,"message":"视频制作失败"}]
 2017/04/08 21:45:50 ERROR [controller.(*ZbVideoWorker).check](zb_video_worker.go:94) check zb video error: json: cannot unmarshal array into Go value of type ext.ZbVideoInfo
+2017/04/08 21:58:58  INFO [controller.(*Logic).Run](logic.go:47) server starting on[:6565]..
+2017/04/08 21:59:33 DEBUG [controller.(*Logic).HandleReceiveMsg](robot_logic.go:9) receive robot msg: &{{36325774 @ca26de8112525f84fe6850887cfe69699fd84d63e6f6866f737bfbc1da5cc257 小会儿 receivemsg people @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04  自己移动2 } {  } {      0 } text 91658108  0}
+2017/04/08 21:59:33 DEBUG [controller.(*ZbVideoWorker).runWorker](zb_video_worker.go:62) handle worker of msg: 91658108
+2017/04/08 21:59:33 DEBUG [ext.(*RobotExt).SendMsgs](robot_ext.go:324) msg: &{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 text 正在查找视频中, 请稍后 ...}]}
+2017/04/08 21:59:34 DEBUG [ext.(*ZbVideoExt).GetZbVideo](zb_video_ext.go:30) get zb video req: &{91658108}
+2017/04/08 21:59:37 DEBUG [controller.(*ZbVideoWorker).check](zb_video_worker.go:99) get video success: &{1000 视频制成功 {http://onz526f5k.bkt.clouddn.com/14916581017964 /www/html/duobbBackend/video/runtime/userEnd/oaKrZwsAF6pRX6z3Qn_EhIZ3DG9014916580947304.mp4}}
+2017/04/08 21:59:37 DEBUG [ext.(*RobotExt).SendMsgs](robot_ext.go:324) msg: &{[{小会儿 people 自己移动2 @645cfe535ab3b4e1407972f70fe1f7b56bb32a147146f2c7a37b9127472a4d04 video /www/html/duobbBackend/video/runtime/userEnd/oaKrZwsAF6pRX6z3Qn_EhIZ3DG9014916580947304.mp4}]}

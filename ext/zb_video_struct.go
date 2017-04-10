@@ -2,7 +2,7 @@ package ext
 
 // uri
 const (
-	ZB_VIDEO_MAKE_QUERY = "/index.php?r=make/query"
+	ZB_VIDEO_MAKE_QUERY = "/index.php/make/query"
 )
 
 const (
